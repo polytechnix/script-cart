@@ -17,10 +17,7 @@ class Products {
 			element.classList.remove(this.activeBtnClassName);
 			element.innerHTML = this.addedBtnCartText;			
 		}
-
-		// console.log(element, id);
 	}
-
 
 	render() {
 		let htmlCatalog = '';
@@ -48,7 +45,7 @@ class Products {
 					<img class="products-element__image" src="${imgSrc}" alt="${name}"
 					
 					<span class="products-element__price">
-						${price}
+						${price.toLocaleString()} <span class="currency">руб.</span>
 					</span>
 					
 					<button class="${btnClass}" onclick="productsPage.setLocalStorageStore(this, ${id});">
@@ -67,7 +64,6 @@ class Products {
 		PRODUCTS.innerHTML = html;
 	}
 }
-
 
 const productsPage = new Products();
 productsPage.render();
