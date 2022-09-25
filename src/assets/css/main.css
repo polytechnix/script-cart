@@ -1,6 +1,7 @@
 :root {
 	--color-light: #f8f9fa;
 	--color-white: #fff;
+	--color-madium:  #e8e8e8;
 
 	--spacing-small: 10px;
 	--spacing-madium: 15px;
@@ -24,4 +25,17 @@ body {
 	font-family: sans-serif;
 	line-height: 1.5;
 	background-color: var(--color-light);
+}
+
+.close-btn {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 35px;
+	height: 35px;
+	background-image: url(../../assets/images/close.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	cursor: pointer;
 }
